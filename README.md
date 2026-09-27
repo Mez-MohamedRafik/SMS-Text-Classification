@@ -1,0 +1,31 @@
+# 📩 SMS Spam Detection & NLP Classification
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mez-MohamedRafik/YOUR_REPO_NAME/blob/main/YOUR_NOTEBOOK.ipynb)
+
+## 📌 Project Overview
+This project builds an end-to-end Natural Language Processing (NLP) classification pipeline to identify and filter unsolicited SMS spam messages. By leveraging text preprocessing techniques and vectorization algorithms, the model accurately distinguishes between legitimate personal messages (`ham`) and unwanted advertising or fraudulent texts (`spam`).
+
+---
+
+## 📊 Dataset Specifications
+The pipeline evaluates text messages formatted into target and feature pairs:
+
+* **Total Samples Evaluated:** 1,392 validation messages
+* **Target Classes:**
+  * **`ham` (Legitimate):** 1,205 messages (~86.6%)
+  * **`spam` (Spam):** 187 messages (~13.4%)
+* **Data Format:** Two-column tab-separated dataset (`label`, `text`)
+
+---
+
+## 🛠️ Pipeline Architecture & Methodology
+
+1. **Text Preprocessing & Cleaning:**
+   * Tokenized raw text sequences and converted characters to lowercase.
+   * Removed special characters, URLs, numbers, and non-informative punctuation.
+
+2. **Feature Extraction (Vectorization):**
+   * Transformed text strings into numerical feature matrices using `TfidfVectorizer` (Term Frequency-Inverse Document Frequency) to capture word importance while penalizing common stopwords.
+
+3. **Model Selection & Evaluation:**
+   * Trained supervised classification algorithms (such as Naive Bayes / Logistic Regression / Support Vector Machines) to optimize precision and recall metrics on imbalanced text classes.
